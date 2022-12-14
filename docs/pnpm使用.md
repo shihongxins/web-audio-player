@@ -1,0 +1,8 @@
+- 安装 pnpm `npm i -g pnpm`
+  - 常见命令 `init, install(i) [-D, -P, -g], add [-D, -O, -g], remove(uninstall|rm|un) [-D, -O, -P, -g], [run] <cmd|script>, update(up) [-D, -P, -g]`
+  - 升级 pnpm `pnpm add -g pnpm`
+  - 获取 pnpm 包存储位置 `pnpm store path`
+  - 修改 pnpm 包存储位置 `pnpm config store-dir <dir-path>`
+  - 释放 pnpm 包存储空间 `pnpm store prune` (删除未被引用（硬链接）的依赖包)
+- 创建项目 `pnpm create vite`
+  - 安装依赖 `pnpm i`
