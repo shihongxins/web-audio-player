@@ -10,3 +10,5 @@
    git add .
    git commit -am "feat: Initial commit 🎉."
    ```
+## 配置编码风格
+   - 配置 [_.editorconfig_](/.editorconfig)
