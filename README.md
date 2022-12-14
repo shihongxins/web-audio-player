@@ -13,3 +13,4 @@
 ## 配置编码风格
    - 配置 [_.editorconfig_](/.editorconfig)
    - 配置 [_ESLint_](/docs/%E9%85%8D%E7%BD%AEESLint.md)
+   - 配置 [_Prettier_](/docs/%E9%85%8D%E7%BD%AEPrettier.md)
