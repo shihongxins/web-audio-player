@@ -1,4 +1,5 @@
 - 安装 eslint `pnpm add -D eslint`
+- 安装 VS Code Prettier 插件 `ext install dbaeumer.vscode-eslint`
 - 初始化配置 `npx eslint --init`
   1. 新命令 `npm init @eslint/config`
   2. pnpm 新命令 `pnpm create @eslint/config`  
