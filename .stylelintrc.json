@@ -1,7 +1,5 @@
 {
-  "plugins": [
-    "stylelint-order"
-  ],
+  "plugins": ["stylelint-order"],
   "extends": [
     "stylelint-config-prettier",
     "stylelint-config-standard",
@@ -42,33 +40,15 @@
     "order/properties-order": [
       {
         "groupName": "Position",
-        "properties": [
-          "position",
-          "top",
-          "right",
-          "bottom",
-          "left",
-          "z-index",
-          "float",
-          "clear"
-        ]
+        "properties": ["position", "top", "right", "bottom", "left", "z-index", "float", "clear"]
       },
       {
         "groupName": "LayoutItem",
-        "properties": [
-          "order",
-          "flex",
-          "place-self"
-        ]
+        "properties": ["order", "flex", "place-self"]
       },
       {
         "groupName": "LayoutContainer",
-        "properties": [
-          "display",
-          "flex-flow",
-          "place-content",
-          "place-items"
-        ]
+        "properties": ["display", "flex-flow", "place-content", "place-items"]
       },
       {
         "groupName": "Box",
@@ -119,12 +99,7 @@
       },
       {
         "groupName": "Interaction",
-        "properties": [
-          "resize",
-          "user-select",
-          "transition",
-          "animation"
-        ]
+        "properties": ["resize", "user-select", "transition", "animation"]
       }
     ]
   }

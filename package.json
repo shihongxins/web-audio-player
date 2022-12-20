@@ -7,8 +7,9 @@
     "dev": "vite",
     "build": "vue-tsc && vite build",
     "preview": "vite preview",
-    "lint": "eslint src/**/*",
-    "lint:style": "stylelint src/**/*"
+    "lint:script": "eslint . --ext .vue,.js,.jsx,.ts,.tsx",
+    "format": "prettier . --write",
+    "lint:style": "stylelint ./**/*.{css,scss,sass,less,vue,jsx,tsx}"
   },
   "dependencies": {
     "vue": "^3.2.45"

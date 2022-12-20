@@ -56,7 +56,7 @@
   dist
   ```
 
-  - 在 [_package.json_](/package.json) 的快捷命令中添加 `"lint:style": "stylelint src/**/*"`
+  - 在 [_package.json_](/package.json) 的快捷命令中添加 `"lint:style": "stylelint ./**/*.{css,scss,sass,less,vue,jsx,tsx}"`
   - 通过 vite 插件启用 stylelint ，打印校验信息到控制台
     1. 安装 vite 对应的 stylelint 插件 [_vite-plugin-stylelint_](https://www.npmjs.com/package/vite-plugin-stylelint) `pnpm add -D vite-plugin-stylelint`
     2. 导入 vite-plugin-eslint 到 [_vite.config.js_](/vite.config.ts) `plugin` 中

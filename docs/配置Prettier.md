@@ -7,3 +7,4 @@
     1. 扩展项中添加 `extends: ["plugin:prettier/recommended"]`
     2. 插件项中添加 `plugins: ["prettier"]`
     3. 规则中添加 `rules: { "prettier/prettier": "error" }`
+- 在 [_package.json_](/package.json) 中新增命令 `"format": "prettier . --write"` 即可进行快速校验

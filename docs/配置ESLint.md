@@ -30,7 +30,7 @@
   });
   ```
 
-  - 在 [_package.json_](/package.json) 中新增命令 `"lint": "eslint src/**/*"` 即可进行快速校验
+  - 在 [_package.json_](/package.json) 中新增命令 `"lint:script": "eslint . --ext .vue,.js,.jsx,.ts,.tsx"` 即可进行快速校验
   - 报错 <span red>Parsing error: '>' expected.eslint</span> 1. 安装 [vue-eslint-parser](https://github.com/vuejs/vue-eslint-parser) `pnpm add -D vue-eslint-parser` 2. 在 eslint 配置文件 [_.eslintrc.cjs_](/.eslintrc.cjs) 中新增 `parser: "vue-eslint-parser"` (将原 `parser: "@typescript-eslint/parser"` 移动到 `parserOptions` 中)
     > 新 eslint 初始化 typescript 项目时， **如果选择使用 eslint 修改代码风格** 会将 **eslint-config-standard** 替换为新 **eslint-config-standard-with-typescript** ，可能产生以下问题：
 
