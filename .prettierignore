@@ -1,3 +1,5 @@
 # prettier 忽略文件
-/node_modules/
-/dist/
+.husky
+.vscode
+dist
+.*ignore
