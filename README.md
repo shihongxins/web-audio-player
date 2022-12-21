@@ -15,6 +15,7 @@
 ## 配置编码风格
 
 - 配置 [_.editorconfig_](/.editorconfig) 对应 VS Code 插件 `ext install EditorConfig.EditorConfig`
+- 添加 [_.gitattributes_](/.gitattributes) 文件，保证 git 适配换行符（解决 `Delete `␍`eslint` 错误）
 - 配置 [_ESLint_](/docs/%E9%85%8D%E7%BD%AEESLint.md)
 - 配置 [_Prettier_](/docs/%E9%85%8D%E7%BD%AEPrettier.md)
 - 配置 [_CSS 相关_](/docs/%E9%85%8D%E7%BD%AECSS%E7%9B%B8%E5%85%B3.md)
@@ -26,3 +27,17 @@
 - 校验提交规范
   - 使用 [_commitlint_](/docs/commitlint.md) 校验提交信息
   - 使用 [_commitizen_](/docs/commitizen.md) 交互式生成 commit-msg
+
+## 其他
+
+- TODO: 自动生成 CHANGELOG
+- TODO: 规范版本发布
+- TODO: 自动化部署继承
+
+## 参考
+
+- [《手摸手教你使用最新版 husky(v7.0.1)让代码更优雅规范》- 掘金](https://juejin.cn/post/6982192362583752741)
+- [《详解如何使得代码提交更规范（lint-staged、commitlint、commitizen、conventional-changelog-cli）》- 掘金](https://juejin.cn/post/6976891381914533918)
+- [《基于 Vite 从 0 到 1 搭建一个 Vue3 相关的工程化模板项目》- 掘金](https://juejin.cn/post/7174643560594014245)
+- [《一文了解 VsCode、Eslint、Prettier、Husky 相关配置》- 掘金](https://juejin.cn/post/7169889743486844965)
+- [《从 0 搭建 Vite 3 + Vue 3 前端工程化项目》- 掘金](https://juejin.cn/post/7156957907890733063)
