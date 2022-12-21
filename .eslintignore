@@ -8,5 +8,6 @@
 dist
 src/assets
 src/lib*/third*
+*.min.*
 # Ignore files with .css, .sass, .scss, .less in src
 src/**/*.*ss

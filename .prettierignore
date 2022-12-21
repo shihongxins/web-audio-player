@@ -1,5 +1,21 @@
-# prettier 忽略文件
-.husky
+## OS
+.DS_Store
+.idea
 .vscode
+
+# Ignored suffix
+*.log
+*.svg
+*.png
+*.ico
+*ignore
+/*-lock*.*
+
+## Local
+.husky
+node_modules
+
+## Built-files
+*.min.*
+.cache
 dist
-.*ignore

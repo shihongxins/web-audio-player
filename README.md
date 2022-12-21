@@ -21,5 +21,7 @@
 
 ## 提交检测
 
-- 提交前校验代码
+- 校验代码规范
   - 使用 [_配置 husky 和 lint-staged_](/docs/配置husky和lint-staged.md)
+- 校验提交规范
+  - 使用 [_commitlint_](/docs/commitlint.md) 校验提交信息
