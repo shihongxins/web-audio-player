@@ -18,7 +18,7 @@
   - 通过 husky 新增 git hooks
 
   ```
-  pnppm dlx husky add .husky/<filename> "content"
+  pnpm dlx husky add .husky/<filename> "content"
   git add .husky/<filename>
   git commit -m "xxxx"
   ```
