@@ -3,6 +3,11 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "config": {
+    "commitizen": {
+      "path": "cz-git"
+    }
+  },
   "scripts": {
     "prepare": "husky install",
     "dev": "vite",
@@ -10,7 +15,8 @@
     "preview": "vite preview",
     "lint:script": "eslint . --ext .vue,.js,.cjs,.mjs,.jsx,.ts,.tsx",
     "format": "prettier . --write",
-    "lint:style": "stylelint ./**/*.{css,scss,sass,less,postcss,vue,jsx,tsx}"
+    "lint:style": "stylelint ./**/*.{css,scss,sass,less,postcss,vue,jsx,tsx}",
+    "commit": "cz"
   },
   "dependencies": {
     "vue": "^3.2.45"
@@ -21,6 +27,8 @@
     "@typescript-eslint/eslint-plugin": "^5.46.1",
     "@typescript-eslint/parser": "^5.46.1",
     "@vitejs/plugin-vue": "^4.0.0",
+    "commitizen": "^4.2.6",
+    "cz-git": "^1.4.1",
     "eslint": "^8.29.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.2.1",

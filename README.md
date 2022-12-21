@@ -25,3 +25,4 @@
   - 使用 [_配置 husky 和 lint-staged_](/docs/配置husky和lint-staged.md)
 - 校验提交规范
   - 使用 [_commitlint_](/docs/commitlint.md) 校验提交信息
+  - 使用 [_commitizen_](/docs/commitizen.md) 交互式生成 commit-msg
