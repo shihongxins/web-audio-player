@@ -30,7 +30,7 @@
 
 ## 其他
 
-- TODO: 自动生成 CHANGELOG
+- [_自动生成 CHANGELOG_](/docs/%E8%87%AA%E5%8A%A8%E7%94%9F%E6%88%90%20changelog.md)
 - TODO: 规范版本发布
 - TODO: 自动化部署继承
 
@@ -41,3 +41,4 @@
 - [《基于 Vite 从 0 到 1 搭建一个 Vue3 相关的工程化模板项目》- 掘金](https://juejin.cn/post/7174643560594014245)
 - [《一文了解 VsCode、Eslint、Prettier、Husky 相关配置》- 掘金](https://juejin.cn/post/7169889743486844965)
 - [《从 0 搭建 Vite 3 + Vue 3 前端工程化项目》- 掘金](https://juejin.cn/post/7156957907890733063)
+- [《从零到一实现对 Git Commit Message 规范和校验，并生成 changelog 文档》- 掘金](https://juejin.cn/post/7005135785263366157#heading-9)
