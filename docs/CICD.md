@@ -17,3 +17,4 @@
     - 建立 [_.github/workflows/gh-deploy.yml_](/.github/workflows/gh-deploy.yml) 文件，内容参考教程
     - 在 [_package.json_](/package.json) 中添加 `"homepage": "https://<user-name>.github.io/<project-name>"`
   - 推送本地修改，在仓库的 **Actions** 页面查看 CI 工作流运行情况。
+  - 如果部署后出现请求资源文件 404 的话，可修改打包部署的公共资源路径，如修改 [_vite.config.ts_](/vite.config.ts) 的 `base: "./"`

@@ -5,6 +5,7 @@ import stylelintPlugin from "vite-plugin-stylelint";
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: "./",
   plugins: [
     vue(),
     eslintPlugin({
