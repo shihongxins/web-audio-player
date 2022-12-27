@@ -42,3 +42,4 @@
 - [《一文了解 VsCode、Eslint、Prettier、Husky 相关配置》- 掘金](https://juejin.cn/post/7169889743486844965)
 - [《从 0 搭建 Vite 3 + Vue 3 前端工程化项目》- 掘金](https://juejin.cn/post/7156957907890733063)
 - [《从零到一实现对 Git Commit Message 规范和校验，并生成 changelog 文档》- 掘金](https://juejin.cn/post/7005135785263366157#heading-9)
+- [《还在手动发包? 试试 release-it 自动发包吧 📦》](https://juejin.cn/post/7172885546362994702#heading-5)
