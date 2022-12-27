@@ -1,0 +1,38 @@
+name: gh-deploy ⚙️
+on:
+  push:
+    branches:
+      - main
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [16.x]
+    steps:
+      # 拉取代码
+      - name: Checkout 🎉
+        uses: actions/checkout@v2
+      # 安装 Node.js 指定版本
+      - name: Use Node.js ${{ matrix.node-version }} ♻
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+      # 安装依赖
+      - name: Install dependencies 🔧
+        run: npm install
+      # 打包构建
+      - name: Build 📦
+        run: npm run build
+      # 部署
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          # 分支
+          branch: gh-pages
+          # 目录
+          folder: dist
+          # 操作密钥
+          token: ${{ secrets.ACCESS_TOKEN }}
+          # 自动清理文件
+          clean: true

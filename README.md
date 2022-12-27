@@ -31,8 +31,8 @@
 ## 其他
 
 - [_自动生成 CHANGELOG_](/docs/%E8%87%AA%E5%8A%A8%E7%94%9F%E6%88%90%20changelog.md)
-- [**规范版本发布**](/docs/%E8%A7%84%E8%8C%83%E7%89%88%E6%9C%AC%E5%8F%91%E5%B8%83.md)
-- TODO: 自动化部署继承
+- [_规范版本发布_](/docs/%E8%A7%84%E8%8C%83%E7%89%88%E6%9C%AC%E5%8F%91%E5%B8%83.md)
+- [_CI/CD_](/docs/CICD.md)
 
 ## 参考
 
