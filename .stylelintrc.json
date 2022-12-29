@@ -7,8 +7,16 @@
     "stylelint-config-standard-vue/scss"
   ],
   "rules": {
+    "no-empty-source": [
+      true,
+      {
+        "severity": "warning"
+      }
+    ],
     "color-function-notation": "legacy",
     "alpha-value-notation": "number",
+    "value-keyword-case": null,
+    "declaration-block-trailing-semicolon": null,
     "scss/dollar-variable-pattern": [
       "^(-?[a-z][a-z0-9]*)(-[a-z0-9]+)*$",
       {

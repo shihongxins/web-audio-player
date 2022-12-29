@@ -1,49 +1,42 @@
 <script setup lang="ts">
-  import HelloWorld from "./components/HelloWorld.vue";
+  import TitleVue from "./components/TitleVue.vue";
+  import ControlVue from "./components/ControlVue.vue";
+  import SwiperVue from "./components/SwiperVue.vue";
 </script>
 
 <template>
-  <div class="container">
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
-    <div class="backdrop">
-      <HelloWorld msg="Vite + Vue" />
-    </div>
+  <div class="player">
+    <TitleVue class="player-title" />
+    <main class="player-container">
+      <SwiperVue class="player-content" />
+      <ControlVue class="player-control" />
+    </main>
   </div>
 </template>
 
-<style lang="scss" scoped>
-  .container {
-    // 测试 SCSS
-    background-color: $color_theme-primary;
+<style lang="scss">
+  .player {
+    --color-primary: #333;
+    --color-secondary: #666;
+    --color-normal: #999;
 
-    .logo {
-      padding: 1.5em;
-      height: 6em;
-      will-change: filter;
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+    overflow: hidden;
+    background: linear-gradient(to bottom, var(--color-secondary, #666), var(--color-normal, #999));
+    color: var(--color-primary, #333);
+
+    &-container {
+      flex: 1;
+      display: flex;
+      flex-flow: column;
+      overflow: hidden;
     }
 
-    .logo:hover {
-      filter: drop-shadow(0 0 2em #646cffaa);
-    }
-
-    .logo.vue:hover {
-      filter: drop-shadow(0 0 2em #42b883aa);
-    }
-
-    .backdrop {
-      border-radius: 25px;
-
-      // 测试 PostCSS
-      width: 960px;
-      box-shadow: inset 0 0 6px hwb(0deg 100% 0% / 0.2);
-      background: hwb(0deg 100% 0% / 0.2);
-      color: oklch(61% 0.2 29);
-      backdrop-filter: blur(8px);
+    &-content {
+      flex: 1;
+      overflow: hidden;
     }
   }
 </style>
