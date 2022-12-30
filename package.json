@@ -22,6 +22,7 @@
     "release": "release-it"
   },
   "dependencies": {
+    "jsmediatags": "3.9.3",
     "normalize.css": "^8.0.1",
     "vue": "^3.2.45"
   },
@@ -29,6 +30,7 @@
     "@commitlint/cli": "^17.3.0",
     "@commitlint/config-conventional": "^17.3.0",
     "@release-it/conventional-changelog": "^5.1.1",
+    "@types/jsmediatags": "^3.9.3",
     "@typescript-eslint/eslint-plugin": "^5.46.1",
     "@typescript-eslint/parser": "^5.46.1",
     "@vitejs/plugin-vue": "^4.0.0",

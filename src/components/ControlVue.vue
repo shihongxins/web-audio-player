@@ -1,10 +1,65 @@
 <script lang="ts" setup>
-  import { ref } from "vue";
-  const playlistVisiable = ref(false);
-  const playlist = ref<File[]>([]);
+  import { computed, ref } from "vue";
+  import { ListCircle } from "../utils/index";
+  import jsmediatags from "jsmediatags";
+  import { TagType } from "jsmediatags/types";
+  export interface Song {
+    file: File;
+    info: TagType;
+  }
+
+  const listCircleObj = ref<null | ListCircle<Song>>(null);
+  const currentPlayingIndex = computed(() => {
+    return listCircleObj.value?.index;
+  });
+  const btnNextText = computed(() => {
+    let text = "播放列表为空";
+    if (playlist.value.length && listCircleObj.value) {
+      listCircleObj.value.nextRound();
+      const nextSong = listCircleObj.value.selectedList().pop();
+      listCircleObj.value.lastRound();
+      if (nextSong) {
+        text = `下一首：${nextSong.info.tags.title}`;
+      }
+    }
+    return text;
+  });
+  const selectDirVisiable = ref(false);
+  const playlist = ref<Song[]>([]);
   const loadPlayList = (e: Event) => {
     const fileInput = e.target as HTMLInputElement;
+    if (fileInput && fileInput.files) {
+      for (let i = 0; i < fileInput.files.length; i++) {
+        const file = fileInput.files.item(i);
+        if (file && file.type.includes("audio")) {
+          jsmediatags.read(file, {
+            onSuccess(data) {
+              const fileNameArr = file.name
+                .replace(/\..+/gim, "")
+                .split("-")
+                .map((s) => s.trim());
+              data.tags.artist = data.tags.artist || fileNameArr[0] || "未知艺术家";
+              data.tags.title = data.tags.title || fileNameArr[1];
+              playlist.value.push({
+                file,
+                info: data,
+              });
+            },
+          });
+        }
+      }
+      fileInput.value = "";
+      listCircleObj.value = new ListCircle(playlist.value);
+    }
   };
+
+  const playlistRemove = (index: number) => {
+    playlist.value.splice(index, 1);
+  };
+
+  defineExpose({
+    listCircleObj,
+  });
 </script>
 
 <template>
@@ -30,29 +85,33 @@
       <button>
         <SVGIcon icon="round-skip-next"></SVGIcon>
       </button>
-      <button @click="playlistVisiable = true">
+      <button @click="selectDirVisiable = true">
         <SVGIcon icon="round-queue-music"></SVGIcon>
       </button>
     </div>
     <label class="btn-next">
-      <span>播放列表为空</span>
+      <span>{{ btnNextText }}</span>
       <input type="file" accept="audio/*" multiple webkitdirectory @change="loadPlayList" />
     </label>
-    <div class="playlist-popover" :class="{ show: playlistVisiable }">
+    <div class="playlist-popover" :class="{ show: selectDirVisiable }">
       <p>播放队列({{ playlist.length }})</p>
       <ul class="playlist-items">
-        <li v-for="(item, index) in 6" :key="index">
+        <li
+          v-for="(song, index) in playlist"
+          :key="index + song.file.name"
+          :class="{ current: index === currentPlayingIndex }"
+        >
           <p>
-            <span>千千阙歌</span>
-            <span>陈慧娴</span>
+            <span>{{ song.info.tags.title }}</span>
+            <span>{{ song.info.tags.artist }}</span>
           </p>
-          <button>
+          <button @click="playlistRemove(index)">
             <SVGIcon icon="round-close" size="14px"></SVGIcon>
           </button>
         </li>
       </ul>
     </div>
-    <div class="popover-mask" v-show="playlistVisiable" @click="playlistVisiable = false"></div>
+    <div class="popover-mask" v-show="selectDirVisiable" @click="selectDirVisiable = false"></div>
   </section>
 </template>
 
@@ -189,6 +248,10 @@
 
         button {
           padding: 4px;
+        }
+
+        &.current {
+          color: var(--color-primary #333);
         }
       }
     }

@@ -21,6 +21,7 @@ module.exports = {
   rules: {
     "prettier/prettier": "error",
     "no-var": "error",
+    "no-debugger": "warn",
     semi: ["error", "always"],
   },
 };
